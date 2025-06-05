@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI-Powered Resume Screener</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Upload Your Resume</h2>
+    <form id="resumeForm">
+      <input type="file" id="resume" name="resume" required />
+      <button type="submit">Upload</button>
+    </form>
+
+    <div id="loader" class="loader"></div>
+    <div id="toast" class="toast hidden"></div>
+    <div id="result"></div>
+
+    <hr>
+    <h2>Ranked Resumes</h2>
+    <button id="loadRankingBtn">View Ranked Resumes</button>
+    <div id="rankingSection"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
